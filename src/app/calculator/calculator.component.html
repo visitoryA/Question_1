@@ -1,0 +1,14 @@
+
+  <div class="row">
+    <div class="first-col section">
+      <input class="inputNum" type="number" [(ngModel)]="inputNumber" (change)="inputNumberChange()">
+    </div>
+    <div class="sec-col section">
+      <select [(ngModel)]="selectedFn" (change)="calculateValue()">
+        <option *ngFor="let func of calFunctions" [value]="func.code">{{ func.text }}</option>
+      </select>
+    </div>
+    <div class="last-col section">
+      {{ result }}
+    </div>
+  </div>
